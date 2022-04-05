@@ -22,7 +22,6 @@ img
 body
 {
     margin:0px;
-    padding:0px;
 }
 
 body p, nav, ul
@@ -45,6 +44,7 @@ header
     justify-content: space-between;
     align-items: center;
     height: 125px;
+    padding:25px;
 }
 
 header figure
@@ -85,7 +85,7 @@ nav li
     font-size: 15px;
     color: black;
     margin: 0px;
-    padding:0px;
+    padding:0px 25px 0 25px;
 }
 
 nav li:hover
@@ -121,6 +121,10 @@ nav li a:focus
 
     /* CHERCHE LIEUX */
 
+main
+{
+    padding:25px;
+}
         /* GENERAL */
 
 
@@ -205,7 +209,7 @@ fieldset
 
 #button span
 {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -224,11 +228,6 @@ fieldset
     margin: 0 0 20px 0;
     font-size: 15px;
     font-weight: bold;
-}
-        
-#titre_filtres
-{
-    border: none;
 }
         
 #Filtres ul
@@ -331,6 +330,7 @@ article
 {
     background-color: #f2F2F2;
     border-radius: 25px;
+    margin:0 10px 0 0;
 }
 
 article section
@@ -394,7 +394,7 @@ article h3
     margin: 0px;
 }
                         
-#Hotels a div img
+#Hotels img
 {
     margin: 0px;
     border-top-left-radius: 15px ;
@@ -456,6 +456,7 @@ aside
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:0 0 0 10px;
 }
 
 #top_aside
@@ -511,10 +512,10 @@ aside
     border-bottom-left-radius: 15px;
     overflow: hidden;
 }
-#bottom_aside div img
+.img img
 {
-    float: left;
     margin: 0px;
+    padding: 0px;
     border-top-left-radius: 15px ;
     border-bottom-left-radius: 15px;
 }
@@ -544,7 +545,7 @@ aside
 {
     display: flex;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin: 20px 0 0 0;
     padding: 0;
 }
 
@@ -571,6 +572,7 @@ aside
 #Activités_à_marseille h3
 {
     font-size: 22px;
+    padding:25px;
 }
 
 #Activités
@@ -593,8 +595,6 @@ aside
     
 #Activités a
 {
-    margin:0px 50px 25px 25px;
-    padding:0px;
     text-decoration: none;
     color: black;
     display: block;
@@ -604,6 +604,7 @@ aside
     
 #Activités ul
 {
+    margin:0px 20px 0 20px;
     padding: 0px;
     display: flex;
     flex-direction: column;
@@ -614,13 +615,15 @@ aside
     
 #Activités h4
 {
-    padding-left: 25px;
+    margin:auto;
+    padding:20px 0 20px 25px;
+    font-size:20px;
     font-weight: bolder;
 }
     
 .activite_taille_1
 {
-    margin-top: 0px;
+    margin:0px 20px 0px 0px;
 }   
     
 .activite_taille_1 div
@@ -728,6 +731,28 @@ footer a
         flex-wrap:wrap;
     }
 
+    #bottom_aside a{
+        margin:0 0 25px 0;
+        height:300px;
+    }
+
+    .img{
+        width:auto;
+        height:auto;
+    }
+
+    .populaire_infos h4{
+        font-size:22px;
+    }
+
+    .populaire_infos p, .populaire_infos i{
+        font-size:20px
+    }
+
+    .populaire_infos ul{
+        display:block
+    }
+
     #Activités
     {
         flex-wrap:wrap; 
@@ -829,10 +854,11 @@ footer a
     }
 }
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 767px)
 {
     header{
         flex-direction: column;
+        width:100%;
         height:auto;
     }
 
@@ -840,6 +866,7 @@ footer a
         width:auto;
         height:auto;
         margin: 0;
+        padding:0;
     }
 
     figure img{
@@ -849,12 +876,19 @@ footer a
     nav{
         width:100%;
         height:auto;
+        padding:0;
     }   
+
+    nav ul{
+        border-bottom: #F2F2F2 solid 3px;
+        padding-bottom:0;
+    }
 
     nav li{
         border-top: transparent solid 3px;
         border-bottom: #F2F2F2 solid 3px;
         height:auto;
+        margin-bottom:0;
     }
 
     nav li:hover{
@@ -870,7 +904,11 @@ footer a
     }
 
     main{
-        padding:10px 0 15px 10px;  
+        padding:0px;  
+    }
+
+    #champs_recherche_lieux{
+        width:auto;
     }
 
     #button{
@@ -879,7 +917,7 @@ footer a
     }
 
     #button span{
-        display:none
+        display:none;
     }
 
     #button i{
@@ -894,7 +932,7 @@ footer a
     #Filtres ul{
         flex-wrap:wrap;
         padding:0;
-        justify-content: flex-start
+        justify-content: flex-start;
     }
 
     #Filtres ul li{
@@ -906,11 +944,51 @@ footer a
     }
 
     #main_center{
-        flex-direction:column-reverse
+        flex-direction:column-reverse;
+        margin:0;
+        padding:0;
+    }
+
+    aside{
+        width:auto;
+        margin:0;
+        border-radius:0px;
+    }
+
+    #bottom_aside{
+        margin: 0;
+        padding:25px
+    }
+
+    #bottom_aside a{
+        margin:0;
+        padding:0;
+        width:270px;
+        height:100px;
+    }
+
+    .img{
+        height:auto;
+        padding: 0px;
+    }
+
+    .img img{
+        margin: 0px;
+        padding: 0px;
+}
+
+    .populaire_infos{
+        width:60%;
+        padding:0 0 0 20px;
+        margin:0 0 0 20px;
+        padding: 0px;
+    }
+
+    .populaire_infos ul{
+        margin: 0;
     }
     
     article{
-        
         border-radius:0px;
     }
     
@@ -918,6 +996,14 @@ footer a
         display:block;
     }
 
+    #Activités ul{
+        margin:0;
+    }
+
+    #Activités li{
+        margin:0;
+    }
+    
     #left{
         display:block;
     }
