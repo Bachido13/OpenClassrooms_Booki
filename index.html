@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="index_2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/60936c5846.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
-        <figure>
-            <img src="images/logo/Booki.png" alt="logo_Booki">
-        </figure>
+        <h1>
+            <figure>
+                <img src="images/logo/Booki.png" alt="logo_Booki">
+            </figure>
+        </h1>
         <nav>
             <ul>
                 <li>
-                    <a href="#Hébergements_à_marseille" src="#Hébergements">Hébergements</a>
+                    <a href="#hebergements">Hébergements</a>
                 </li>
                 <li>
-                    <a href="#Activités_à_marseille" src="#Activités_à_marseille">Activités</a>
+                    <a href="#activites_a_marseille">Activités</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <form method="post" action="traitement.php">
+        <form method="post">
             <h2>
                 Trouvez votre hebergement pour des vacances de rêve
             </h2>
@@ -45,7 +47,7 @@
                     </button>
                 </p>
             </fieldset>
-            <fieldset id="Filtres">
+            <fieldset id="filtres">
                 <h3 id="titre_filtres">
                     Filtres 
                 </h3>
@@ -55,7 +57,7 @@
                             <i class="fa-solid fa-money-bill-wave"></i>
                         </div>
                         <p>
-                        <input type="checkbox" name="Filtres" id="Economique">Economique<label for="Economique"></label>
+                        <input type="checkbox" name="filtres" id="Economique">Economique<label for="Economique"></label>
                         </p>
                     </li>
                     <li>
@@ -63,7 +65,7 @@
                             <i class="fa-solid fa-child-reaching"></i>
                         </div>
                         <p>
-                            <input type="checkbox" name="Filtres" id="Familial">Familial<label for="Familial"></label>
+                            <input type="checkbox" name="filtres" id="Familial">Familial<label for="Familial"></label>
                         </p>
                     </li>
                     <li>
@@ -71,7 +73,7 @@
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <p>
-                            <input type="checkbox" name="Filtres" id="Romantique">Romantique<label for="Romantique"></label>
+                            <input type="checkbox" name="filtres" id="Romantique">Romantique<label for="Romantique"></label>
                         </p>
                     </li>
                     <li>
@@ -79,30 +81,30 @@
                             <i class="fa-solid fa-dog"></i>
                         </div>
                         <p>
-                            <input type="checkbox" name="Filtres" id="Animaux autorisés">Animaux autorisés<label for="Animaux autorisés"></label>
+                            <input type="checkbox" name="filtres" id="Animaux">Animaux autorisés<label for="Animaux"></label>
                         </p>
                     </li>
                 </ul>
             </fieldset>
-            <section id="info">
+            <div id="info">
                 <div>
                     <i class="fa-solid fa-info"></i>
                 </div>
                 <p>
                 Plus de 500 logements sont disponibles dans cette ville
                 </p>
-            </section>
+            </div>
         </form>
-        <section id="main_center">
-            <article>
-                <section id="Hébergements">
-                    <h3>
-                        Hébergements à Marseille
-                    </h3>
-                    <section id="Hotels">
-                        <a href="#">
+        <div id="main_center">
+            <section id="hebergements">
+                <h3>
+                    Hébergements à Marseille
+                </h3>
+                <section id="hotels">
+                    <a href="#">
+                        <article>
                             <div>
-                                <img src="images/hebergements/La Cannebiere.jpg" alt="Auberge_La_Cannebiere">
+                                <img src="images/hebergements/Cannebiere.jpg" alt="Auberge_La_Cannebiere">
                             </div>
                             <h4>
                                 Auberge La Cannebière
@@ -124,14 +126,16 @@
                                     <i class="fa-solid fa-star"></i>
                                 </li>
                                 <li>
-                                    <i class="fa-solid fa-star grey-star"></i>
+                                    <i class="fa-solid fa-star grey-star"></i>                                    
                                 </li>
                             </ul>
-                        </a>
-                        <a href="#">
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article>
                             <div>
-                                <img src="images/hebergements/Hotel du port.jpg" alt="Hotel_du_port">
-                            </div>
+                                <img src="images/hebergements/Port.jpg" alt="Hotel_du_port">
+                            </div> 
                             <h4>
                                 Hôtel du port
                             </h4>
@@ -141,7 +145,7 @@
                             <ul>
                                 <li>
                                     <i class="fa-solid fa-star"></i>
-                                </li>
+                                </li>                                    
                                 <li>
                                     <i class="fa-solid fa-star"></i>
                                 </li>
@@ -150,15 +154,17 @@
                                 </li>
                                 <li>
                                     <i class="fa-solid fa-star"></i>
-                                </li>
+                                </li>                                    
                                 <li>
                                     <i class="fa-solid fa-star"></i>
                                 </li>
                             </ul>
-                        </a>
-                        <a href="#">
-                            <div>
-                                <img src="images/hebergements/Les mouettes.jpg" alt="hotel_les_mouettes">
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article>
+                            <div>                                    
+                                <img src="images/hebergements/Mouettes.jpg" alt="hotel_les_mouettes">
                             </div>
                             <h4>
                                 Hôtel Les mouettes
@@ -183,10 +189,12 @@
                                     <i class="fa-solid fa-star grey-star"></i>
                                 </li>
                             </ul>
-                        </a>
-                        <a href="#">
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article>
                             <div>
-                                <img src="images/hebergements/La Mer.jpg" alt="hotel_de_la_mer">
+                                <img src="images/hebergements/Mer.jpg" alt="hotel_de_la_mer">
                             </div>
                             <h4>
                                 Hôtel de la mer
@@ -211,10 +219,12 @@
                                     <i class="fa-solid fa-star grey-star"></i>
                                 </li>
                             </ul>
-                        </a>
-                        <a href="">
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article>
                             <div>
-                                <img src="images/hebergements/Le panier.jpg" alt="Auberge_le_Panier">
+                                <img src="images/hebergements/Panier.jpg" alt="Auberge_le_Panier">
                             </div>
                             <h4>
                                 Auberge le Panier
@@ -239,8 +249,10 @@
                                     <i class="fa-solid fa-star grey-star"></i>
                                 </li>
                             </ul>
-                        </a>
-                        <a href="">
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article>
                             <div>
                                 <img src="images/hebergements/Amina.jpg" alt="hotel_chez_Amina">
                             </div>
@@ -267,15 +279,13 @@
                                     <i class="fa-solid fa-star"></i>
                                 </li>
                             </ul>
-                        </a>
-                    </section>
-                    <a href="#" id="afficher_plus">
-                        <h4>
-                            Afficher plus
-                        </h4>
+                        </article>
                     </a>
                 </section>
-            </article>
+                <a href="#" id="afficher_plus">
+                        Afficher plus
+                </a>
+            </section>
             <aside>
                 <section id="top_aside">
                     <h3>
@@ -287,163 +297,181 @@
                 </section>
                 <section id="bottom_aside">
                     <a href="#">
-                        <div class="img"> 
-                            <img src="images/hebergements/Soleil du matin.jpg" alt="Hotel_le_soleil_du_matin">
-                        </div>
-                        <div class="populaire_infos">
-                            <h4>
-                                Hôtel Le soleil du matin
-                            </h4>
-                            <p>
-                                Nuit à partir de <span>128€</span> 
-                            </p>
-                            <ul>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>                                
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                            </ul>
-                        </div>
+                        <article>
+                            <div class="img"> 
+                                <img src="images/hebergements/Soleil.jpg" alt="Hotel_le_soleil_du_matin">
+                            </div>
+                            <div class="populaire_infos">
+                                <h4>
+                                    Hôtel Le soleil du matin
+                                </h4>
+                                <p>
+                                    Nuit à partir de <span>128€</span> 
+                                </p>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>                                
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
                     </a>
                     <a href="#">
-                        <div class="img">
-                            <img src="images/hebergements/Coeur de l'eau.jpg" alt="Au_coeur_de_l'eau_chambres_d'hotes">
-                        </div>
-                        <div class="populaire_infos">
-                            <h4>
-                                Au coeur de l'eau Chambres d'hôtes
-                            </h4>
-                            <p>
-                                Nuit à partir de <span>71€</span> 
-                            </p>
-                            <ul>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star grey-star"></i>
-                                </li>
-                            </ul>
-                        </div>
+                        <article>
+                            <div class="img">
+                                <img src="images/hebergements/Coeur.jpg" alt="Au_coeur_de_l'eau_chambres_d'hotes">
+                            </div>
+                            <div class="populaire_infos">
+                                <h4>
+                                    Au coeur de l'eau Chambres d'hôtes
+                                </h4>
+                                <p>
+                                    Nuit à partir de <span>71€</span> 
+                                </p>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star grey-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
                     </a>
                     <a href="#">
-                        <div class="img">
-                            <img src="images/hebergements/Tout bleu et blanc.jpg" alt="Hotel_tout_bleu_et_blanc">
-                        </div>
-                        <div class="populaire_infos">
-                            <h4>
-                                Hôtel Tout bleu et Blanc
-                            </h4>
-                            <p>
-                                Nuit à partir de <span>68€</span> 
-                            </p>
-                            <ul>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-star grey-star"></i>
-                                </li>
-                            </ul>
-                        </div>
+                        <article>
+                            <div class="img">
+                                <img src="images/hebergements/Tout_bleu.jpg" alt="Hotel_tout_bleu_et_blanc">
+                            </div>
+                            <div class="populaire_infos">
+                                <h4>
+                                    Hôtel Tout bleu et Blanc
+                                </h4>
+                                <p>
+                                    Nuit à partir de <span>68€</span> 
+                                </p>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star grey-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
                     </a>
                 </section>
             </aside>
-        </section> 
-        <section id="Activités_à_marseille">
+        </div> 
+        <section id="activites_a_marseille">
              <h3>
                 Activités à Marseille
              </h3>
-            <section id="Activités">
+            <section id="activites">
                 <div id="left">
                     <a href="#" class="activite_taille_1">
-                        <div>
-                            <img src="images/activites/Vieux port.jpg" alt="Vieux_port">
-                        </div>
-                        <h4>
-                            Vieux Port
-                        </h4>
+                        <article>
+                            <div>
+                                <img src="images/activites/VieuxPort.jpg" alt="Vieux_port">
+                            </div>
+                            <h4>
+                                Vieux Port
+                            </h4>
+                        </article>
                     </a>
                     <ul>
                         <li>
                             <a href="#" class="activite_taille_2">
-                                <div>
-                                    <img src="images/activites/Pomegues.jpg" alt="Fort_de_pomergues">
-                                </div>
-                                <h4>
-                                    Fort de Pomègues
-                                </h4>
+                                <article>
+                                    <div>
+                                        <img src="images/activites/Pomegues.jpg" alt="Fort_de_pomergues">
+                                    </div>
+                                    <h4>
+                                        Fort de Pomègues
+                                    </h4>
+                                </article>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="activite_taille_3">
-                                <div>
-                                    <img src="images/activites/Frioul.jpg" alt="Îles_du_frioul">
-                                </div>
-                                <h4>
-                                    Îles du Frioul
-                                </h4>
+                                <article>
+                                    <div>
+                                        <img src="images/activites/Frioul.jpg" alt="Îles_du_frioul">
+                                    </div>
+                                    <h4>
+                                        Îles du Frioul
+                                    </h4>
+                                </article>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div id="right">
                     <a href="#" class="activite_taille_1">
-                        <div>
-                            <img src="images/activites/Calanques.jpg" alt="Parc_des_calanques">
-                        </div>
-                        <h4>
-                            Parc National des Calanques
-                        </h4>
+                        <article>
+                            <div>
+                                <img src="images/activites/Calanques.jpg" alt="Parc_des_calanques">
+                            </div>
+                            <h4>
+                                Parc National des Calanques
+                            </h4>
+                        </article>
                     </a>
                     <ul>
                         <li>
                             <a href="#" class="activite_taille_4">
-                                <div>
-                                    <img src="images/activites/La garde.jpg" alt="Notre-Dame-de-la-Garde">
-                                </div>
-                                <h4>
-                                    Notre-Dame-de-la-Garde
-                                </h4>
+                                <article>
+                                    <div>
+                                        <img src="images/activites/LaGarde.jpg" alt="Notre-Dame-de-la-Garde">
+                                    </div>
+                                    <h4>
+                                        Notre-Dame-de-la-Garde
+                                    </h4>
+                                </article>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="activite_taille_4">
-                                <div>
-                                    <img src="images/activites/Longchamps.jpg" alt="Parc_Longchamps">
-                                </div>
-                                <h4>
-                                    Parc Longchamp
-                                </h4>
+                                <article>
+                                    <div>
+                                        <img src="images/activites/Longchamps.jpg" alt="Parc_Longchamps">
+                                    </div>
+                                    <h4>
+                                        Parc Longchamp
+                                    </h4>
+                                </article>
                             </a>
                         </li>
                     </ul>
